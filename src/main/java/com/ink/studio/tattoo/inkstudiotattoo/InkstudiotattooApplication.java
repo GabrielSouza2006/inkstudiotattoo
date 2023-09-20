@@ -8,6 +8,7 @@ public class InkstudiotattooApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(InkstudiotattooApplication.class, args);
+		System.out.println("FOI!");
 	}
 
 }
