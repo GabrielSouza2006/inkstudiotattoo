@@ -1,5 +1,6 @@
-package com.ink.studio.tattoo.model;
+package com.ink.studio.tattoo.inkstudiotattoo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,18 +8,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name="Usuario")
 public class Usuario {
 	@Id //PK
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Auto incremento do SQL Server
-	
+	@Column(name = "id")
 	private Long id;
 	private String cpf;
 	private String email;
 	private String senha;
 	private String nome;
-	private String fone;
-	private boolean codStatusUsuario;
+	private String telefone;
+	private String nascimento;
+	
 	
 	public Long getId() {
 		return id;
@@ -51,18 +53,15 @@ public class Usuario {
 		this.nome = nome;
 	}
 	public String getFone() {
-		return fone;
+		return telefone;
 	}
-	public void setFone(String fone) {
-		this.fone = fone;
+	public void setFone(String telefone) {
+		this.telefone = telefone;
 	}
-	public boolean isCodStatusUsuario() {
-		return codStatusUsuario;
+	public String getDataNascimento() {
+		return nascimento;
 	}
-	public void setCodStatusUsuario(boolean codStatusUsuario) {
-		this.codStatusUsuario = codStatusUsuario;
+	public void setNascimento(String nascimento) {
+		this.nascimento = nascimento;
 	}
-	
-	
-
 }
