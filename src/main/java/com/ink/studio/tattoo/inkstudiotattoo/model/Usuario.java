@@ -64,4 +64,14 @@ public class Usuario {
 	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
+	public static Usuario setUsuarioDto(UsuarioDTO usuariodto, Usuario usuario) {
+		
+		return null;
+	}
+	
+	public void setUsuarioDTO(UsuarioDTO usuarioDTO) {
+		this.nome = usuarioDTO.getNome();
+		this.email = usuarioDTO.getEmail();
+		this.telefone = usuarioDTO.getTelefone();
+	}
 }
